@@ -4,10 +4,48 @@
 body {
     font-family: 'Poppins', sans-serif;
     padding-top: 56px; /* Altura del navbar fijo */
+    background-color: #f7f9fc;
+    color: #1b1f3b;
+    line-height: 1.7;
 }
 
 html {
     scroll-behavior: smooth; /* Desplazamiento suave al hacer clic en los enlaces del menú */
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0d6efd;
+}
+
+.navbar {
+    backdrop-filter: blur(12px);
+    background-color: rgba(17, 24, 39, 0.85) !important;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.2);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.navbar .nav-link {
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    border-radius: 999px;
+    margin-inline: 0.25rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+    background-color: rgba(13, 110, 253, 0.15);
+    color: #fff !important;
 }
 
 /* Sección Hero (Encabezado) */
@@ -17,24 +55,149 @@ html {
     background-size: cover;
     background-position: center;
     color: white;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero-section h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para que el texto resalte */
+    letter-spacing: 0.05em;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(255, 255, 255, 0.15), transparent 60%);
+    mix-blend-mode: screen;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+    max-width: 780px;
+}
+
+.hero-section .btn-lg {
+    padding: 0.9rem 2.8rem;
+    font-weight: 600;
+    border-radius: 999px;
+    box-shadow: 0 18px 35px rgba(13, 110, 253, 0.45);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-section .btn-lg:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 22px 45px rgba(13, 110, 253, 0.55);
 }
 
 /* Estilos para las tarjetas de servicios */
 .card {
     border: none; /* Quitamos el borde por defecto */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Animación suave */
+    border-radius: 1.5rem;
+    padding-bottom: 0.5rem;
 }
 
 .card:hover {
     transform: translateY(-10px); /* Eleva la tarjeta al pasar el mouse */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    box-shadow: 0 24px 45px rgba(15, 23, 42, 0.15);
 }
 
 .card-img-top {
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
+    aspect-ratio: 16 / 11;
+    object-fit: cover;
+}
+
+.card-title {
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+.card-text {
+    color: #5c627a;
+}
+
+main.container {
+    position: relative;
+}
+
+main.container::before {
+    content: "";
+    position: absolute;
+    inset: -3rem;
+    background: linear-gradient(135deg, rgba(13, 110, 253, 0.08), rgba(25, 135, 84, 0.08));
+    border-radius: 3rem;
+    z-index: -1;
+}
+
+main.container h2 {
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #0f172a;
+    margin-bottom: 3rem;
+}
+
+main.container .row {
+    row-gap: 2.5rem;
+}
+
+#contacto {
+    background: linear-gradient(180deg, rgba(248, 249, 250, 0.9), rgba(222, 242, 236, 0.9));
+}
+
+#contacto h2 {
+    font-weight: 700;
+    color: #12324d;
+    margin-bottom: 1rem;
+}
+
+#contacto p {
+    color: #4a5268;
+}
+
+#contacto .btn-success {
+    padding: 0.85rem 2.5rem;
+    font-weight: 600;
+    border-radius: 999px;
+    box-shadow: 0 16px 32px rgba(25, 135, 84, 0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contacto .btn-success:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 22px 45px rgba(25, 135, 84, 0.45);
+}
+
+#contacto #magicText {
+    min-height: 2.5rem;
+}
+
+footer {
+    background: linear-gradient(135deg, #111827, #1f2937);
+    letter-spacing: 0.05em;
+}
+
+footer p {
+    margin-bottom: 0;
+    color: rgba(255, 255, 255, 0.78);
+}
+
+@media (max-width: 991px) {
+    .navbar .nav-link {
+        margin-inline: 0;
+        margin-block: 0.25rem;
+    }
+
+    .hero-section {
+        min-height: 70vh;
+    }
+
+    main.container::before {
+        inset: -2rem;
+    }
 }
