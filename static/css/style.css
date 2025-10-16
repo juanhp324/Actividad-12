@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Estilos Generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    padding-top: 56px; /* Altura del navbar fijo */
+}
+
+html {
+    scroll-behavior: smooth; /* Desplazamiento suave al hacer clic en los enlaces del menú */
+}
+
+/* Sección Hero (Encabezado) */
+.hero-section {
+    min-height: 80vh; /* Ocupa el 80% de la altura de la pantalla */
+    background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero-section h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para que el texto resalte */
+}
+
+/* Estilos para las tarjetas de servicios */
+.card {
+    border: none; /* Quitamos el borde por defecto */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Animación suave */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Eleva la tarjeta al pasar el mouse */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+}
+
+.card-img-top {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
