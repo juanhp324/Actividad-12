@@ -24,10 +24,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active scroll-link" href="#inicio">Inicio</a>
+                        <a class="nav-link scroll-link" href="#inicio">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link scroll-link" href="#servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scroll-link" href="#destacados">Destacados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scroll-link" href="#proceso">Proceso</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link scroll-link" href="#testimonios">Testimonios</a>
@@ -43,19 +49,22 @@
     <header id="inicio" class="hero-section text-white text-center d-flex align-items-center justify-content-center">
         <div class="container">
             <h1 class="display-3 fw-bold">Bienvenido a Mi Espacio Creativo</h1>
-            <p class="lead my-4">Un lugar donde las ideas cobran vida a través del código.</p>
+            <p class="lead my-4">Creamos <span id="heroDynamic" data-phrases="experiencias digitales memorables|productos que emocionan a tus usuarios|soluciones tecnológicas hechas a medida">experiencias digitales memorables</span>.</p>
             <div class="d-flex justify-content-center flex-wrap gap-3">
                 <a href="#servicios" class="btn btn-primary btn-lg scroll-link">Descubre Más</a>
                 <button id="openShowcase" class="btn btn-outline-light btn-lg">Ver Portafolio</button>
             </div>
         </div>
+        <div class="hero-ornament hero-ornament--one"></div>
+        <div class="hero-ornament hero-ornament--two"></div>
+        <div class="hero-ornament hero-ornament--three"></div>
     </header>
 
     <main id="servicios" class="container my-5">
         <h2 class="text-center mb-4">Lo que Ofrecemos</h2>
         <div class="row">
             <div class="col-md-4 mb-4">
-                <div class="card h-100 shadow-sm">
+                <div class="card h-100 shadow-sm reveal-on-scroll">
                     <img src="../static/img/diseño_web.jpg" class="card-img-top" alt="Diseño Web">
                     <div class="card-body text-center">
                         <h5 class="card-title">Diseño Moderno</h5>
@@ -65,7 +74,7 @@
                 </div>
             </div>
             <div class="col-md-4 mb-4">
-                <div class="card h-100 shadow-sm">
+                <div class="card h-100 shadow-sm reveal-on-scroll">
                     <img src="../static/img/codigo_eficiente.jpg" class="card-img-top" alt="Código Limpio">
                     <div class="card-body text-center">
                         <h5 class="card-title">Código Eficiente</h5>
@@ -75,7 +84,7 @@
                 </div>
             </div>
             <div class="col-md-4 mb-4">
-                <div class="card h-100 shadow-sm">
+                <div class="card h-100 shadow-sm reveal-on-scroll">
                     <img src="../static/img/responsive_diseno.png" class="card-img-top" alt="Sitio Responsivo">
                     <div class="card-body text-center">
                         <h5 class="card-title">100% Responsivo</h5>
@@ -85,26 +94,26 @@
                 </div>
             </div>
         </div>
-        <div id="serviceDetail" class="alert alert-primary text-center shadow-sm" role="status">Selecciona un servicio para conocer más detalles.</div>
+        <div id="serviceDetail" class="alert alert-primary text-center shadow-sm reveal-on-scroll" role="status">Selecciona un servicio para conocer más detalles.</div>
     </main>
 
     <section id="destacados" class="py-5">
         <div class="container">
             <div class="row g-4 text-center">
                 <div class="col-12 col-md-4">
-                    <div class="p-4 bg-white rounded-4 shadow-sm h-100">
+                    <div class="p-4 bg-white rounded-4 shadow-sm h-100 reveal-on-scroll">
                         <span class="display-4 fw-bold stat-number" data-target="120">0</span>
                         <p class="mt-2 mb-0">Proyectos entregados con excelencia</p>
                     </div>
                 </div>
                 <div class="col-12 col-md-4">
-                    <div class="p-4 bg-white rounded-4 shadow-sm h-100">
+                    <div class="p-4 bg-white rounded-4 shadow-sm h-100 reveal-on-scroll">
                         <span class="display-4 fw-bold stat-number" data-target="48">0</span>
                         <p class="mt-2 mb-0">Clientes alrededor del mundo</p>
                     </div>
                 </div>
                 <div class="col-12 col-md-4">
-                    <div class="p-4 bg-white rounded-4 shadow-sm h-100">
+                    <div class="p-4 bg-white rounded-4 shadow-sm h-100 reveal-on-scroll">
                         <span class="display-4 fw-bold stat-number" data-target="15">0</span>
                         <p class="mt-2 mb-0">Años combinados de experiencia</p>
                     </div>
@@ -113,12 +122,48 @@
         </div>
     </section>
 
+    <section id="proceso" class="py-5 position-relative overflow-hidden">
+        <div class="container">
+            <h2 class="text-center mb-5">Así convertimos ideas en resultados</h2>
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-5 reveal-on-scroll">
+                    <div id="processDetail" class="process-detail-card bg-white rounded-4 shadow-sm p-4">
+                        <h4 class="mb-3">Tu visión es el punto de partida</h4>
+                        <p class="mb-0">Explora cada etapa para descubrir cómo trabajamos contigo desde el primer boceto hasta el lanzamiento.</p>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="timeline process-panel d-flex flex-column gap-3">
+                        <button type="button" class="timeline-step reveal-on-scroll active" data-title="1. Descubrimiento" data-description="Escuchamos tus objetivos, analizamos a tu audiencia y definimos una estrategia clara para el proyecto.">
+                            <span class="timeline-index">1</span>
+                            <span>Sesión de descubrimiento y estrategia</span>
+                        </button>
+                        <button type="button" class="timeline-step reveal-on-scroll" data-title="2. Co-creación" data-description="Diseñamos prototipos navegables, validamos hipótesis y pulimos la experiencia junto a tu equipo.">
+                            <span class="timeline-index">2</span>
+                            <span>Diseño iterativo centrado en el usuario</span>
+                        </button>
+                        <button type="button" class="timeline-step reveal-on-scroll" data-title="3. Desarrollo ágil" data-description="Desarrollamos con las mejores prácticas, automatizamos pruebas y aseguramos el rendimiento desde el día uno.">
+                            <span class="timeline-index">3</span>
+                            <span>Implementación y pruebas continuas</span>
+                        </button>
+                        <button type="button" class="timeline-step reveal-on-scroll" data-title="4. Lanzamiento y crecimiento" data-description="Planificamos el despliegue, medimos resultados y acompañamos la evolución con ideas de mejora constantes.">
+                            <span class="timeline-index">4</span>
+                            <span>Lanzamiento acompañado y optimización</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="process-glow process-glow--one"></div>
+        <div class="process-glow process-glow--two"></div>
+    </section>
+
     <section id="testimonios" class="py-5 bg-white">
         <div class="container">
             <h2 class="text-center mb-5">Historias de Éxito</h2>
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
+                    <div class="card h-100 shadow-sm border-0 reveal-on-scroll">
                         <div class="card-body">
                             <p class="fs-5">“Transformaron nuestra plataforma en tiempo récord y con una calidad excepcional.”</p>
                             <h6 class="fw-bold mb-0">María López</h6>
@@ -127,7 +172,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
+                    <div class="card h-100 shadow-sm border-0 reveal-on-scroll">
                         <div class="card-body">
                             <p class="fs-5">“Su enfoque centrado en el usuario elevó nuestros indicadores clave al siguiente nivel.”</p>
                             <h6 class="fw-bold mb-0">Javier Rodríguez</h6>
@@ -136,7 +181,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
+                    <div class="card h-100 shadow-sm border-0 reveal-on-scroll">
                         <div class="card-body">
                             <p class="fs-5">“La comunicación constante y la transparencia marcaron la diferencia en el proyecto.”</p>
                             <h6 class="fw-bold mb-0">Laura Méndez</h6>
@@ -151,11 +196,11 @@
     <section id="newsletter" class="py-5">
         <div class="container">
             <div class="row align-items-center g-4">
-                <div class="col-lg-6">
+                <div class="col-lg-6 reveal-on-scroll">
                     <h2 class="mb-3">Únete a la lista de inspiración</h2>
                     <p class="mb-0">Recibe ideas exclusivas, lanzamientos y tips técnicos directamente en tu bandeja de entrada.</p>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 reveal-on-scroll">
                     <form id="newsletterForm" class="d-flex flex-column flex-md-row gap-3">
                         <input type="email" class="form-control form-control-lg" id="newsletterEmail" placeholder="Ingresa tu correo">
                         <button type="submit" class="btn btn-success btn-lg flex-shrink-0">Suscribirme</button>
